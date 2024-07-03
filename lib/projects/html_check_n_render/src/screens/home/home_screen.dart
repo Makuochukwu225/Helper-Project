@@ -19,12 +19,14 @@ class HtmlCheckAndRenderHomeScreen extends StatelessWidget {
       return htmlTagPattern.hasMatch(input);
     }
 
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: containsHtmlTags(htmlData)
-            ? const HtmlWidget(htmlData)
-            : const Text(htmlData),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: containsHtmlTags(htmlData)
+              ? const HtmlWidget(htmlData)
+              : const Text(htmlData),
+        ),
       ),
     );
   }

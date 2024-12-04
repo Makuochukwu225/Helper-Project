@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: ListView.separated(
                                 shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
-                                physics: const NeverScrollableScrollPhysics(),
+                                // physics: const NeverScrollableScrollPhysics(),
                                 itemBuilder: (context, index) {
                                   var blog = provider.blog[index];
                                   return CircleAvatar(
@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 separatorBuilder: (context, index) =>
-                                    const SizedBox(height: 10),
+                                    const SizedBox(width: 10),
                                 itemCount: provider.blog.length),
                           ),
                           ListView.separated(
